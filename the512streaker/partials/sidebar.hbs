@@ -1,0 +1,69 @@
+<div id="site-sidebar" class="c-site-sidebar">
+    {{! Sidebar header with blog cover and logo images }}
+    <div class="c-sidebar-header" style="background-image: url({{@blog.cover}})">
+        <a class="c-sidebar-header__link" href="{{@blog.url}}" title="{{@blog.title}}">
+            <img class="c-sidebar-header__image" src="{{@blog.logo}}" alt="{{@blog.title}}">
+        </a>
+    </div>
+
+    {{! Sidebar blog title }}
+    {{#is "home"}}<h1 class="c-sidebar-blog-title">{{else}}<h2 class="c-sidebar-blog-title">{{/is}}
+        <a class="c-sidebar-blog-title__link" href="{{@blog.url}}" title="{{@blog.title}}">
+            {{@blog.title}}
+        </a>
+    {{#is "home"}}</h1>{{else}}</h2>{{/is}}
+
+    {{! Sidebar blog description }}
+    <h2 class="c-sidebar-blog-description">
+        {{@blog.description}}
+    </h2>
+
+    {{! Sidebar contact links }}
+    <div class="c-sidebar-contact-links">
+        <a class="c-sidebar-contact-links__item" href="https://github.com/cpbuckingham" target="_blank">
+            github |
+        </a>
+
+        <a class="c-sidebar-contact-links__item" href="https://twitter.com/cpbuckingham" target="_blank">
+            twitter |
+        </a>
+
+        <a class="c-sidebar-contact-links__item" href="https://www.linkedin.com/in/cameron-buckingham-24236670" target="_blank">
+            linkedin |
+        </a>
+
+        <a class="c-sidebar-contact-links__item" href="http://www.cpbuckingham.com">
+            site
+        </a>
+    </div>
+
+    {{! Sidebar navigation - Ghost's menu }}
+    {{navigation}}
+
+    {{! Sidebar promotion / additional links }}
+    <div class="c-sidebar-promotion-links">
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/codingstreak">
+            #Coding_Streak
+        </a>
+
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/workoutstreak">
+            #Workout_Streak
+        </a>
+
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/books">
+            #books
+        </a>
+
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/therogue">
+            #theRogue
+        </a>
+
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/relationships">
+            #relationships
+        </a>
+
+        <a class="c-sidebar-promotion-links__item" href="https://cpbuckingham.ghost.io/tag/exercise">
+            #exercise
+        </a>
+    </div>
+</div>
